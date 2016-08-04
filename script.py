@@ -1,15 +1,15 @@
 
 import os, sys, subprocess, math
 
-query = sys.argv[1]
+query = '/Users/amandaeveritt/ENV/FLASKapp/APP5_all/UPLOAD_FOLDER/query'
 
-subprocess.call('hmmsearch blue.hmm {} > {}.blue.output'.format(query,query[:-3]),shell=True)
-subprocess.call('hmmsearch yellow.hmm {} > {}.yellow.output'.format(query,query[:-3]),shell=True)
-subprocess.call('hmmsearch red.hmm {} > {}.red.output'.format(query,query[:-3]),shell=True)
+subprocess.call('hmmsearch blue.hmm {} > blue.output'.format(query),shell=True)
+subprocess.call('hmmsearch yellow.hmm {} > yellow.output'.format(query),shell=True)
+subprocess.call('hmmsearch red.hmm {} > red.output'.format(query),shell=True)
 
 samples = {}
 expected_blue = float("4.08E-37")
-with open ('{}.blue.output'.format(query[:-3]), 'r') as f:
+with open ('blue.output', 'r') as f:
 	blue_results =[]
 	for line in f:
 		if 'Description' in line:
@@ -30,7 +30,7 @@ with open ('{}.blue.output'.format(query[:-3]), 'r') as f:
 		samples[NAME].append(bscore)
 
 expected_red = float("3.71E-45")
-with open ('{}.red.output'.format(query[:-3]), 'r') as f2:
+with open ('red.output', 'r') as f2:
         red_results =[]
         for line in f2:
                 if 'Description' in line:
@@ -50,7 +50,7 @@ with open ('{}.red.output'.format(query[:-3]), 'r') as f2:
 		samples[NAME].append(rscore)
 
 expected_yellow = float("2.69E-45")
-with open ('{}.yellow.output'.format(query[:-3]), 'r') as f3:
+with open ('yellow.output', 'r') as f3:
         yellow_results =[]
         for line in f3:
                 if 'Description' in line:
@@ -88,6 +88,7 @@ for ID in samples:
                 print 'yellow score:', abs(samples[ID][2])
                 print 'red score:', abs(samples[ID][1])
 
-os.remove('{}.blue.output'.format(query[:-3]))
-os.remove('{}.red.output'.format(query[:-3]))
-os.remove('{}.yellow.output'.format(query[:-3]))
+os.remove('blue.output')
+os.remove('red.output')
+os.remove('yellow.output')
+os.remove(query)

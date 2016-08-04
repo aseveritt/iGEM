@@ -1,0 +1,17 @@
+Your directory needs to look like:
+
+app.py
+UPLOAD_FOLDER
+script.py
+red.hmm
+blue.hmm
+yellow.hmm
+templates
+	file.html
+	index.html
+
+
+Also, you may need to install hmmer for yours to work. (brew install hmmer)
+
+Let me know if you have any questions. 
+Also, the output isn't normally one code block. Its all on new lines in my python code-- its how I passed the variable in flask that makes it do that and I couldnt fix it :(
