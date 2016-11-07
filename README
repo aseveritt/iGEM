@@ -1,17 +1,14 @@
-Your directory needs to look like:
+Created by Amanda Everitt as part of the UC Davis 2016 iGEM team. 
 
-app.py
-UPLOAD_FOLDER
-script.py
-red.hmm
-blue.hmm
-yellow.hmm
-templates
-	file.html
-	index.html
+This is a new program that uses profile Hidden Markov Models and multiple sequence alignments to predict that the given cyanobacteriochrome (CBCR) will express blue, red, or yellow pigment. For more information on this model and the motivation please visit our teams wiki!
 
+Blue bin = absorb above 600nm
+Yellow bin = absorb from 550-600nm
+Red bin = absorb below 550nm
 
-Also, you may need to install hmmer for yours to work. (brew install hmmer)
+Directory RUNLOCAL/ has the script so that you can run it from your own command line. Just clone the repository and run the scripty as:
+python local_scripy.py your_query.fa
 
-Let me know if you have any questions. 
-Also, the output isn't normally one code block. Its all on new lines in my python code-- its how I passed the variable in flask that makes it do that and I couldnt fix it :(
+Directory WEBSITE/ is the repository we used to make the user interface which can be found at: http://ucdigem.pythonanywhere.com/
+
+email aseveritt@ucdavis.edu with any questions

@@ -1,0 +1,7 @@
+1. clone repository 
+2. make sure HMMER is installed
+3. run script in following format:
+
+python local_script.py your_script.fa
+
+the file query.fa is given as a test file. 
