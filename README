@@ -3,8 +3,8 @@ Created by Amanda Everitt as part of the UC Davis 2016 iGEM team.
 This is a new program that uses profile Hidden Markov Models and multiple sequence alignments to predict that the given cyanobacteriochrome (CBCR) will express blue, red, or yellow pigment. For more information on this model and the motivation please visit our teams wiki!
 
 Blue bin = absorb above 600nm
-Yellow bin = absorb from 550-600nm
-Red bin = absorb below 550nm
+Red bin = absorb from 550-600nm
+Yellow bin = absorb below 550nm
 
 Directory RUNLOCAL/ has the script so that you can run it from your own command line. Just clone the repository and run the scripty as:
 python local_scripy.py your_query.fa
